@@ -1,0 +1,284 @@
+.brand {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 100px;
+}
+
+/* carousel */
+
+.carousel-img {
+    max-height: 30%;
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: 20%;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+.card {
+    max-width: auto;
+    max-height: auto;
+    /* height: 250px; */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+
+}
+
+.card h2 {
+    font-size: 18px;
+    /* margin: 0; */
+    text-align: center;
+}
+
+.card p {
+    font-size: 14px;
+    /* margin: 10px 0; */
+    text-align: center;
+}
+
+.card img {
+    /* display: flex;
+    align-items: center;
+    width: 70%; */
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    overflow: hidden;
+
+
+
+}
+
+div .card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    float: left;
+    margin-bottom: auto;
+
+    /* padding: 0 10px; */
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div box {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .containProduct {
+        
+        max-width: 100%;
+        flex-direction: column;
+        flex: 100%;
+        margin-bottom: 20px;
+        background-color: red;
+    }
+    .containProduct .card{
+        max-width: 100%;
+        flex-direction: column;
+        flex: 100%;
+        margin-bottom: 20px;
+        background-color: red;
+    }
+
+    /* .card {
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 20px;
+     
+    } */
+}
+
+.containProduct {
+    width: 100%;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+.btn {
+    display: flex;
+    color: red;
+}
+
+.cartAdd {
+    width: max-content;
+    display: block;
+    z-index: 1;
+    position: absolute;
+
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 50px;
+
+    background: white;
+    padding: 15px;
+
+
+}
+#cart{
+    margin-top: 8px;
+    margin-right: 15px;
+    border: black 3px solid;
+    border-radius: 40px;
+    padding: 7px 25px;
+    font-size: large;
+
+}
+.addProduct{
+    padding-top: 15px ;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    border:0;
+
+}
+.addProduct:hover{
+    box-shadow: 0 4px 8px 0 rgba(143, 143, 143, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+.h2Product{
+    font-size: 18px;
+}
+.pProduct{
+    font-size: 16px;
+}
+.cardAddProduct h2{
+    padding-left: 3px;
+    font-size: 18px;
+}
+
+.cardAddProduct {
+    display: flex;
+    height: 60%;
+    padding-right: 15px;
+}
+
+.cardAddProduct img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+#cardAdd{
+
+}
